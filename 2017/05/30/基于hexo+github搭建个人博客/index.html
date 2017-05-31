@@ -100,7 +100,7 @@
 <meta property="og:site_name" content="JimmyJu">
 <meta property="og:description" content="由于最近刚搭建的博客，所以特此来记录下我的个人经验。注：本文使用的环境为Mac OS。Windows的也基本差不多，可以参考。">
 <meta property="og:image" content="https://lh3.googleusercontent.com/8DvXwOaTXQUo2L6McfHbIvbx1E2bDCnt9mreyFj7JQkZit7CujOSZIvlfhu5BLbiRcSHa0OdIiuV_XwjnrpHrwWIJtvKgmPC_uGkswZUzdEi02zwEx-rIfpnLeD_bzCO6GPfmzGtOQC-y2z5RRWni4LqGoFoQgON_aseENRv1XWdwKB0e2t3rV2r6dGAatDvK4oTfvtMySfm2pAilHiukbXPab1henZ55VeuuMrrdGUo47PF6q0ct9jwWcp-OcyRLC6qtkvbZKAuGA-GFHYd8KOpSrdekdVg1-2kTmItCuAeFTSQzCwRvg8RDILKAhnF535uUsUp_QkWDHg1CeCBLEoXWohg6HO2x7UiJ7mVhdxkkO67XCm5NLVORhB6iCvAapiPxNKJn5BZHTkxBlSi12sAMYSYc7Fe-ErULMxFN4ECOKYqrqdFb_22wr4lEFC-qcf3g8SDD1YYo_gQFEbOriwLQKuc_LzZ9-dw0LjgDqrTk4rc0RRLmsFVO7CD5LQWMkcHC_r1r_P65b2z0RytfURIz2yAJjAq8yHG6Vv1ec87A4L3vJusF0M8cYRpAA0l5huVveTwn53pHRhkdZYJAYMjhOknXWYAEVx_951oYJRqu4f_KlA=w1006-h440-no">
-<meta property="og:updated_time" content="2017-05-31T08:33:47.000Z">
+<meta property="og:updated_time" content="2017-05-31T09:28:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="基于hexo+github搭建个人博客">
 <meta name="twitter:description" content="由于最近刚搭建的博客，所以特此来记录下我的个人经验。注：本文使用的环境为Mac OS。Windows的也基本差不多，可以参考。">
@@ -350,53 +350,81 @@
       
         <p>由于最近刚搭建的博客，所以特此来记录下我的个人经验。注：本文使用的环境为Mac OS。Windows的也基本差不多，可以参考。</p>
 <a id="more"></a>
-<p>##环境配置<br>需要安装的工具包括：Node.js, Git, Hexo。</p>
-<p>####1. 安装Node.js<br>用来生成静态页面，建议<a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js官网</a>下载，然后一路安装即可。</p>
-<p>####2.安装git<br>用来将本地Hexo内容提交到Github上。Xcode自带Git，这里不再赘述。或者点击<a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="external">安装程序</a>来下载安装git.</p>
-<p>####3.安装Hexo<br>以上都安装完毕后之后就可以安装Hexo, Hexo 是一个快速、简洁且高效的博客框架。终端命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sudo npm install -g hexo-cli</div></pre></td></tr></table></figure></p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>需要安装的工具包括：Node.js, Git, Hexo。</p>
+<h4 id="1-安装Node-js"><a href="#1-安装Node-js" class="headerlink" title="1. 安装Node.js"></a>1. 安装Node.js</h4><p>用来生成静态页面，建议<a href="https://nodejs.org/en/download/" target="_blank" rel="external">Node.js官网</a>下载，然后一路安装即可。</p>
+<h4 id="2-安装git"><a href="#2-安装git" class="headerlink" title="2.安装git"></a>2.安装git</h4><p>用来将本地Hexo内容提交到Github上。Xcode自带Git，这里不再赘述。或者点击<a href="https://sourceforge.net/projects/git-osx-installer/" target="_blank" rel="external">安装程序</a>来下载安装git.</p>
+<h4 id="3-安装Hexo"><a href="#3-安装Hexo" class="headerlink" title="3.安装Hexo"></a>3.安装Hexo</h4><p>以上都安装完毕后之后就可以安装Hexo, Hexo 是一个快速、简洁且高效的博客框架。终端命令：</p>
+<p><code>$ sudo npm install -g hexo-cli</code></p>
 <blockquote>
 <p>这里要需要输入管理员密码（Mac登录密码）即开始安装 (sudo:linux系统管理指令 -g:全局安装) </p>
 </blockquote>
-<p>接下来在你磁盘上新建一个文件夹，比如”Hexo”然后cd到这个目录下，执行<figure class="highlight plain"><figcaption><span>init```命令：</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">```</div><div class="line">$ hexo init blog</div></pre></td></tr></table></figure></p>
+<p>接下来在你磁盘上新建一个文件夹，比如”Hexo”然后cd到这个目录下，执行hexo init命令：</p>
+<p><code>$ hexo init blog</code></p>
 <blockquote>
 <p>blog是你建立的文件夹名称。cd到blog文件夹下，执行如下命令，安装npm：</p>
 </blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install</div></pre></td></tr></table></figure>
-<p>现在已经搭建起一个本地博客了，接着输入一下命令生成静态文件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo g</div></pre></td></tr></table></figure></p>
-<p>然后输入如下命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo s</div></pre></td></tr></table></figure></p>
+<p><code>$ npm install</code></p>
+<p>现在已经搭建起一个本地博客了，接着输入一下命令生成静态文件：</p>
+<p><code>$ hexo g</code></p>
+<p>然后输入如下命令：</p>
+<p><code>$ hexo s</code></p>
 <p>启动服务器。默认情况下，访问网址为：<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>。(control+c停止)</p>
-<p>##关联GitHub<br>首先登录你的<a href="https://github.com" target="_blank" rel="external">Github帐号</a>，没有的可以先去注册下，这里就不多说了。</p>
-<p>####1. 创建仓库<br>在github首页，新建仓库，<strong>用户名.github.io固定写法</strong>,如下图所示：<img src="https://lh3.googleusercontent.com/8DvXwOaTXQUo2L6McfHbIvbx1E2bDCnt9mreyFj7JQkZit7CujOSZIvlfhu5BLbiRcSHa0OdIiuV_XwjnrpHrwWIJtvKgmPC_uGkswZUzdEi02zwEx-rIfpnLeD_bzCO6GPfmzGtOQC-y2z5RRWni4LqGoFoQgON_aseENRv1XWdwKB0e2t3rV2r6dGAatDvK4oTfvtMySfm2pAilHiukbXPab1henZ55VeuuMrrdGUo47PF6q0ct9jwWcp-OcyRLC6qtkvbZKAuGA-GFHYd8KOpSrdekdVg1-2kTmItCuAeFTSQzCwRvg8RDILKAhnF535uUsUp_QkWDHg1CeCBLEoXWohg6HO2x7UiJ7mVhdxkkO67XCm5NLVORhB6iCvAapiPxNKJn5BZHTkxBlSi12sAMYSYc7Fe-ErULMxFN4ECOKYqrqdFb_22wr4lEFC-qcf3g8SDD1YYo_gQFEbOriwLQKuc_LzZ9-dw0LjgDqrTk4rc0RRLmsFVO7CD5LQWMkcHC_r1r_P65b2z0RytfURIz2yAJjAq8yHG6Vv1ec87A4L3vJusF0M8cYRpAA0l5huVveTwn53pHRhkdZYJAYMjhOknXWYAEVx_951oYJRqu4f_KlA=w1006-h440-no" alt="github01"><br>然后点击Create Repostory完成。</p>
-<p>终端cd到blog文件夹下，vim打开_config.yml，(也可使用编辑器打开)命令如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim _config.yml</div></pre></td></tr></table></figure></p>
-<p>打开后往下滑到最后，修改成下边的样子：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">  repository: https://github.com/username/username.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<h2 id="关联GitHub"><a href="#关联GitHub" class="headerlink" title="关联GitHub"></a>关联GitHub</h2><p>首先登录你的<a href="https://github.com" target="_blank" rel="external">Github帐号</a>，没有的可以先去注册下，这里就不多说了。</p>
+<h4 id="1-创建仓库"><a href="#1-创建仓库" class="headerlink" title="1.创建仓库"></a>1.创建仓库</h4><p>在github首页，新建仓库，<strong>用户名.github.io固定写法</strong>,如下图所示：<img src="https://lh3.googleusercontent.com/8DvXwOaTXQUo2L6McfHbIvbx1E2bDCnt9mreyFj7JQkZit7CujOSZIvlfhu5BLbiRcSHa0OdIiuV_XwjnrpHrwWIJtvKgmPC_uGkswZUzdEi02zwEx-rIfpnLeD_bzCO6GPfmzGtOQC-y2z5RRWni4LqGoFoQgON_aseENRv1XWdwKB0e2t3rV2r6dGAatDvK4oTfvtMySfm2pAilHiukbXPab1henZ55VeuuMrrdGUo47PF6q0ct9jwWcp-OcyRLC6qtkvbZKAuGA-GFHYd8KOpSrdekdVg1-2kTmItCuAeFTSQzCwRvg8RDILKAhnF535uUsUp_QkWDHg1CeCBLEoXWohg6HO2x7UiJ7mVhdxkkO67XCm5NLVORhB6iCvAapiPxNKJn5BZHTkxBlSi12sAMYSYc7Fe-ErULMxFN4ECOKYqrqdFb_22wr4lEFC-qcf3g8SDD1YYo_gQFEbOriwLQKuc_LzZ9-dw0LjgDqrTk4rc0RRLmsFVO7CD5LQWMkcHC_r1r_P65b2z0RytfURIz2yAJjAq8yHG6Vv1ec87A4L3vJusF0M8cYRpAA0l5huVveTwn53pHRhkdZYJAYMjhOknXWYAEVx_951oYJRqu4f_KlA=w1006-h440-no" alt="github01"><br>然后点击Create Repostory完成。</p>
+<p>终端cd到blog文件夹下，vim打开_config.yml，(也可使用编辑器打开)命令如下：</p>
+<p><code>$ vim _config.yml</code></p>
+<p>打开后往下滑到最后，修改成下边的样子：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">type: git</div><div class="line">  repository: https://github.com/username/username.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
 <blockquote>
 <p>你需要将repository后username换成你自己的用户名，需要注意的是<strong>冒号后面都有一个空格</strong></p>
 </blockquote>
-<p>在blog文件夹目录下执行生成静态页面命令：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate		或者：hexo g</div></pre></td></tr></table></figure></p>
+<p>在blog文件夹目录下执行生成静态页面命令：</p>
+<p><code>$ hexo generate        或者：hexo g</code></p>
 <blockquote>
-<p>此时若出现如下报错：<br>ERROR Local hexo not found in ~/blog<br>ERROR Try runing: ‘npm install hexo –save’</p>
-<p>则执行命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo --save</div></pre></td></tr></table></figure></p>
+<p>此时若出现如下报错：</p>
 </blockquote>
-<p>若无报错，自行忽略此步骤。</p>
-<p>再执行配置命令：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy			或者：hexo d</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ERROR Local hexo not found in ~/blog</div><div class="line">ERROR Try runing: &apos;npm install hexo --save‘</div></pre></td></tr></table></figure>
 <blockquote>
-<p>若执行命令hexo deploy仍然报错：无法连接git或找不到git，则执行如下命令来安装hexo-deployer-git：<figure class="highlight plain"><figcaption><span>npm install hexo-deployer-git --save```</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;再次执行hexo generate和hexo deploy命令。  </div><div class="line"></div><div class="line">若你未关联Github，则执行hexo deploy命令时终端会提示你输入Github的用户名和密码，即</div></pre></td></tr></table></figure></p>
+<p>则执行命令：<code>npm install hexo --save</code><br>若无报错，自行忽略此步骤。</p>
 </blockquote>
-<p>Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘:<br>Password for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;hexo deploy命令执行成功后，浏览器中打开网址&lt;http://jimmyju.github.io&gt;（将jimmyju换成你的用户名）能看到和打开http://localhost:4000时一样的页面。</div><div class="line"></div><div class="line">####2.添加ssh key到Github</div><div class="line">#####1.执行如下命令生成ssh key:</div></pre></td></tr></table></figure></p>
-<p>$ ssh-keygen -t rsa -C “your_email@example.com”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">&gt;注意将```your_email@example.com```换成你自己注册Github的邮箱地址。</div><div class="line">&gt;默认会在相应路径下（~/.ssh/id_rsa.pub）生成id_rsa和id_rsa.pub两个文件。</div><div class="line"></div><div class="line">#####2.添加ssh key到github中：</div><div class="line">&gt;Find前往文件夹~/.ssh/id_rsa.pub打开id_rsa.pub文件，里面的信息即为SSH key，将这些信息复制到Github的Add SSH key页面即可。</div><div class="line"></div><div class="line">&gt;进入Github –&gt; Settings –&gt; SSH keys –&gt; add SSH key:</div><div class="line"></div><div class="line">&gt;Title里任意添一个标题，将复制的内容粘贴到Key里，点击下方Add key绿色按钮即可。</div><div class="line"></div><div class="line">#####3.接下来就是发布文章了，终端cd到blog文件夹下，执行如下命令新建文章：</div></pre></td></tr></table></figure></p>
-<p>$ hexo new “postName”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;名为postName.md的文件会建在目录/blog/source/_posts下，postName是文件名，为方便链接不建议掺杂汉字。你当然可以用vim来编辑文章。我用的MWeb编辑器，如果你有好用的markdown编辑器请推荐给我，感激不尽！</div><div class="line"></div><div class="line">注：**文章编辑完成后，终端cd到blog文件夹下，执行如下命令来发布：**</div></pre></td></tr></table></figure></p>
-<p>$ hexo generate    可简化成：hexo g        //生成静态页面<br>$ hexo deploy    可简化成：hexo d        //将文章部署到Github<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&gt;至此，Mac上搭建基于Github的Hexo博客就完成了。</div><div class="line"></div><div class="line">####博客主题</div><div class="line">下面就说一下安装主题的方法，这里可以你可以到[Hexo官网主题](https://hexo.io/themes/)页去搜寻自己喜欢的theme。这里以hexo-theme-next为例, **注意：** 每根换一次主题之前，运行如下命令：</div></pre></td></tr></table></figure></p>
-<p>$ hexo clean   //清除缓存文件<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">#####1.终端cd到 blog 目录下执行如下命令：</div></pre></td></tr></table></figure></p>
-<p>$ git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&gt;然后将blog目录下_config.yml里theme的名称landscape修改为next</div><div class="line"></div><div class="line">#####2.终端cd到blog目录下执行如下命令(每次部署文章的步骤)：</div></pre></td></tr></table></figure></p>
-<p>$ hexo clean        //清除缓存文件 (db.json) 和已生成的静态文件 (public)</p>
-<p>$ hexo g        //生成缓存和静态文件</p>
-<p>$ hexo d        //重新部署到服务器<br>```</p>
+<p>再执行配置命令：<br><code>$ hexo deploy     或者：hexo d</code></p>
+<blockquote>
+<p>若执行命令hexo deploy仍然报错：无法连接git或找不到git，则执行如下命令来安装hexo-deployer-git：<code>$ npm install hexo-deployer-git --save</code><br>再次执行hexo generate和hexo deploy命令。  </p>
+</blockquote>
+<p>若你未关联Github，则执行hexo deploy命令时终端会提示你输入Github的用户名和密码，即</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Username for &apos;https://github.com&apos;:</div><div class="line">Password for &apos;https://github.com&apos;:</div></pre></td></tr></table></figure>
+<blockquote>
+<p>hexo deploy命令执行成功后，浏览器中打开网址<a href="http://jimmyju.github.io">http://jimmyju.github.io</a>（将jimmyju换成你的用户名）能看到和打开<a href="http://localhost:4000时一样的页面。" target="_blank" rel="external">http://localhost:4000时一样的页面。</a></p>
+</blockquote>
+<h4 id="2-添加ssh-key到Github"><a href="#2-添加ssh-key到Github" class="headerlink" title="2.添加ssh key到Github"></a>2.添加ssh key到Github</h4><h5 id="1-执行如下命令生成ssh-key"><a href="#1-执行如下命令生成ssh-key" class="headerlink" title="1.执行如下命令生成ssh key:"></a>1.执行如下命令生成ssh key:</h5><p><code>$ ssh-keygen -t rsa -C &quot;your_email@example.com&quot;</code></p>
+<blockquote>
+<p>注意将<code>your_email@example.com</code>换成你自己注册Github的邮箱地址。<br>默认会在相应路径下（~/.ssh/id_rsa.pub）生成id_rsa和id_rsa.pub两个文件。</p>
+</blockquote>
+<h5 id="2-添加ssh-key到github中："><a href="#2-添加ssh-key到github中：" class="headerlink" title="2.添加ssh key到github中："></a>2.添加ssh key到github中：</h5><blockquote>
+<p>Find前往文件夹~/.ssh/id_rsa.pub打开id_rsa.pub文件，里面的信息即为SSH key，将这些信息复制到Github的Add SSH key页面即可。</p>
+<p>进入Github –&gt; Settings –&gt; SSH keys –&gt; add SSH key:</p>
+<p>Title里任意添一个标题，将复制的内容粘贴到Key里，点击下方Add key绿色按钮即可。</p>
+</blockquote>
+<h5 id="3-接下来就是发布文章了，终端cd到blog文件夹下，执行如下命令新建文章："><a href="#3-接下来就是发布文章了，终端cd到blog文件夹下，执行如下命令新建文章：" class="headerlink" title="3.接下来就是发布文章了，终端cd到blog文件夹下，执行如下命令新建文章："></a>3.接下来就是发布文章了，终端cd到blog文件夹下，执行如下命令新建文章：</h5><p><code>$ hexo new &quot;postName&quot;</code></p>
+<blockquote>
+<p>名为postName.md的文件会建在目录/blog/source/_posts下，postName是文件名，为方便链接不建议掺杂汉字。你当然可以用vim来编辑文章。我用的MWeb编辑器，如果你有好用的markdown编辑器请推荐给我，感激不尽！</p>
+</blockquote>
+<p>注：<strong>文章编辑完成后，终端cd到blog文件夹下，执行如下命令来发布：</strong></p>
+<p><code>$ hexo generate    可简化成：hexo g</code>        //生成静态页面<br><code>$ hexo deploy    可简化成：hexo d</code>    //将文章部署到Github</p>
+<blockquote>
+<p>至此，Mac上搭建基于Github的Hexo博客就完成了。</p>
+</blockquote>
+<h4 id="博客主题"><a href="#博客主题" class="headerlink" title="博客主题"></a>博客主题</h4><p>下面就说一下安装主题的方法，这里可以你可以到<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo官网主题</a>页去搜寻自己喜欢的theme。这里以hexo-theme-next为例, <strong>注意：</strong> 每根换一次主题之前，运行如下命令：<br><code>$ hexo clean   //清除缓存文件</code></p>
+<h5 id="1-终端cd到-blog-目录下执行如下命令："><a href="#1-终端cd到-blog-目录下执行如下命令：" class="headerlink" title="1.终端cd到 blog 目录下执行如下命令："></a>1.终端cd到 blog 目录下执行如下命令：</h5><p><code>$ git clone https://github.com/iissnan/hexo-theme-next themes/next</code></p>
+<blockquote>
+<p>然后将blog目录下_config.yml里theme的名称landscape修改为next</p>
+</blockquote>
+<h5 id="2-终端cd到blog目录下执行如下命令-每次部署文章的步骤-："><a href="#2-终端cd到blog目录下执行如下命令-每次部署文章的步骤-：" class="headerlink" title="2.终端cd到blog目录下执行如下命令(每次部署文章的步骤)："></a>2.终端cd到blog目录下执行如下命令(每次部署文章的步骤)：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$ hexo clean		//清除缓存文件 (db.json) 和已生成的静态文件 (public)</div><div class="line"></div><div class="line">$ hexo g		//生成缓存和静态文件</div><div class="line"></div><div class="line">$ hexo d		//重新部署到服务器</div></pre></td></tr></table></figure>
 <blockquote>
 <p>至于更改theme内容比如名称、描述、头像等去修改blog/_config.yml文件和blog/themes/next/_config.yml文件中对应的属性名称即可， 不要忘记冒号:后加空格。 <a href="http://theme-next.iissnan.com" target="_blank" rel="external">NexT 使用文档</a>里有极详细的介绍。</p>
 </blockquote>
-<p>###后记<br>以上便是我博客的全过程。。。。。</p>
-<p>###参考链接</p>
-<ul>
+<h3 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h3><p>以上便是我博客的全过程。。。。。</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
 <li><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo官网</a></li>
 <li><a href="http://theme-next.iissnan.com" target="_blank" rel="external">NexT</a></li>
 <li><a href="http://gonghonglou.com" target="_blank" rel="external">与佳期的个人博客</a></li>
@@ -420,7 +448,7 @@
   <p><span>本文标题:</span><a href="/2017/05/30/基于hexo+github搭建个人博客/">基于hexo+github搭建个人博客</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 JimmyJu 的个人博客">JimmyJu</a></p>
   <p><span>发布时间:</span>2017年05月30日 - 22:05</p>
-  <p><span>最后更新:</span>2017年05月31日 - 16:05</p>
+  <p><span>最后更新:</span>2017年05月31日 - 17:05</p>
   <p><span>原始链接:</span><a href="/2017/05/30/基于hexo+github搭建个人博客/" title="基于hexo+github搭建个人博客">https://jimmyju.github.io/2017/05/30/基于hexo+github搭建个人博客/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="https://jimmyju.github.io/2017/05/30/基于hexo+github搭建个人博客/"  aria-label="复制成功！"></i></span>
   </p>
@@ -560,8 +588,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/eiffel_tower.png"
@@ -621,6 +658,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#环境配置"><span class="nav-number">1.</span> <span class="nav-text">环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-安装Node-js"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 安装Node.js</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-安装git"><span class="nav-number">1.0.2.</span> <span class="nav-text">2.安装git</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-安装Hexo"><span class="nav-number">1.0.3.</span> <span class="nav-text">3.安装Hexo</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关联GitHub"><span class="nav-number">2.</span> <span class="nav-text">关联GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-创建仓库"><span class="nav-number">2.0.1.</span> <span class="nav-text">1.创建仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-添加ssh-key到Github"><span class="nav-number">2.0.2.</span> <span class="nav-text">2.添加ssh key到Github</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-执行如下命令生成ssh-key"><span class="nav-number">2.0.2.1.</span> <span class="nav-text">1.执行如下命令生成ssh key:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-添加ssh-key到github中："><span class="nav-number">2.0.2.2.</span> <span class="nav-text">2.添加ssh key到github中：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-接下来就是发布文章了，终端cd到blog文件夹下，执行如下命令新建文章："><span class="nav-number">2.0.2.3.</span> <span class="nav-text">3.接下来就是发布文章了，终端cd到blog文件夹下，执行如下命令新建文章：</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#博客主题"><span class="nav-number">2.0.3.</span> <span class="nav-text">博客主题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-终端cd到-blog-目录下执行如下命令："><span class="nav-number">2.0.3.1.</span> <span class="nav-text">1.终端cd到 blog 目录下执行如下命令：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-终端cd到blog目录下执行如下命令-每次部署文章的步骤-："><span class="nav-number">2.0.3.2.</span> <span class="nav-text">2.终端cd到blog目录下执行如下命令(每次部署文章的步骤)：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#后记"><span class="nav-number">2.1.</span> <span class="nav-text">后记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考链接"><span class="nav-number">2.2.</span> <span class="nav-text">参考链接</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
