@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jimmyju.github.io/"/>
-  <updated>2017-05-31T09:28:24.000Z</updated>
+  <updated>2017-06-14T05:47:29.000Z</updated>
   <id>https://jimmyju.github.io/</id>
   
   <author>
@@ -14,6 +14,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>自定义view之onMeasure()的理解</title>
+    <link href="https://jimmyju.github.io/2017/06/12/%E8%87%AA%E5%AE%9A%E4%B9%89view%E4%B9%8BonMeasure-%E7%9A%84%E7%90%86%E8%A7%A3/"/>
+    <id>https://jimmyju.github.io/2017/06/12/自定义view之onMeasure-的理解/</id>
+    <published>2017-06-12T10:13:51.000Z</published>
+    <updated>2017-06-14T05:47:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本文主要记录下对于自定义view中方法的理解。<br>对于自定义view有三大流程：<code>onMeasure</code>（测量）、<code>onLayout</code>（布局）和<code>onDraw</code>（绘制）<br>接下来我就要说下<code>onMeasure()</code>这个方法：</p>
+<a id="more"></a>
+<h4 id="onMeasure"><a href="#onMeasure" class="headerlink" title="onMeasure"></a>onMeasure</h4><p>在布局文件中，对于自定义view的<code>layout_width</code>和<code>layout_height</code>不设置<code>wrap_content</code>,一般不需要进行处理，但如果要设置<code>wrap_content</code>，就要对宽高进行测量。<br><strong>onMeasure函数原型</strong>：<br><code>protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)</code></p>
+<p>参数中的<code>widthMeasureSpec</code>和<code>heightMeasureSpec</code>里面包含了测量模式和尺寸，在这可以借助<strong>Android内置的MeasureSpec类</strong>来获取测量模式和尺寸：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int widthMode = MeasureSpec.getMode(widthMeasureSpec);</div><div class="line">int widthSize = MeasureSpec.getSize(widthMeasureSpec);</div></pre></td></tr></table></figure>
+<p>对于测量模式有三种情况：</p>
+<table>
+<thead>
+<tr>
+<th>测量模式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNSPECIFIED</td>
+<td>父容器没有对当前View有任何限制，当前View可以任意取尺寸</td>
+</tr>
+<tr>
+<td>EXACTLY</td>
+<td>当前尺寸就是当前View应该取的尺寸，对应于<code>match_parent</code>和具体数值情况</td>
+</tr>
+<tr>
+<td>AT_MOST</td>
+<td>当前View所能取的最大尺寸，一般是给定一个大小，view的尺寸不能超过该大小，一般用于<code>wrap_content</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>手重写onMeasure函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@Overrideprotected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123;</div><div class="line">    super.onMeasure(widthMeasureSpec, heightMeasureSpec);</div><div class="line"></div><div class="line">    int width = MeasureSpec.getSize(widthMeasureSpec);</div><div class="line">    int widthMode = MeasureSpec.getMode(widthMeasureSpec);</div><div class="line">    int height = MeasureSpec.getSize(heightMeasureSpec);</div><div class="line">    int heightMode = MeasureSpec.getMode(heightMeasureSpec);</div><div class="line"></div><div class="line">    if (widthMode == MeasureSpec.AT_MOST &amp;&amp; heightMode == MeasureSpec.AT_MOST) &#123;</div><div class="line">        setMeasuredDimension(WRAP_WIDTH, WRAP_HEIGHT);</div><div class="line">    &#125; else if (widthMode == MeasureSpec.AT_MOST) &#123;</div><div class="line">        setMeasuredDimension(WRAP_WIDTH, height);</div><div class="line">    &#125; else if (heightMode == MeasureSpec.AT_MOST) &#123;</div><div class="line">        setMeasuredDimension(width, WRAP_HEIGHT);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>只处理AT_MOST情况也就是<code>wrap_content</code>,其他情况则沿用系统的测量值即可。<code>setMeasuredDimension</code>会设置View宽高的测量值，只有<code>setMeasuredDimension</code>调用之后，才能使用<code>getMeasuredWidth()</code>和<code>getMeasuredHeight()</code>来获取视图测量出的宽高，以此之前调用这两个方法得到的值都会是0。</p>
+<p>注意：在覆写onMeasure方法的时候，必须调用 <code>setMeasuredDimension(int,int)</code>来存储这个View经过测量得到的measured width and height。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要记录下对于自定义view中方法的理解。&lt;br&gt;对于自定义view有三大流程：&lt;code&gt;onMeasure&lt;/code&gt;（测量）、&lt;code&gt;onLayout&lt;/code&gt;（布局）和&lt;code&gt;onDraw&lt;/code&gt;（绘制）&lt;br&gt;接下来我就要说下&lt;code&gt;onMeasure()&lt;/code&gt;这个方法：&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="android" scheme="https://jimmyju.github.io/categories/android/"/>
+    
+    
+      <category term="view" scheme="https://jimmyju.github.io/tags/view/"/>
+    
+  </entry>
   
   <entry>
     <title>基于hexo+github搭建个人博客</title>
@@ -172,7 +226,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#x6d;&#x61;&#105;&#x6c;&#x74;&#x6f;&#x3a;&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#x6d;">&#x65;&#x78;&#x61;&#x6d;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#111;&#x6d;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;">&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
