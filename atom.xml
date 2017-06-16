@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jimmyju.github.io/"/>
-  <updated>2017-06-14T05:47:29.000Z</updated>
+  <updated>2017-06-16T12:49:55.000Z</updated>
   <id>https://jimmyju.github.io/</id>
   
   <author>
@@ -14,6 +14,64 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ABD WIFI</title>
+    <link href="https://jimmyju.github.io/2017/06/16/ABD-WIFI/"/>
+    <id>https://jimmyju.github.io/2017/06/16/ABD-WIFI/</id>
+    <published>2017-06-16T12:14:21.000Z</published>
+    <updated>2017-06-16T12:49:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Android开发时，一般我们都是用usb线把手机和电脑连接起来进行调试工作，在这记录下如何使用无线连接。</p>
+<a id="more"></a>
+<h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
+<li>手机和电脑必须在同一个局域网</li>
+<li>数据线（第一次连接需要用到，一个再连接就不需要了）</li>
+<li>需要知道怎么执行ADB命令</li>
+</ul>
+<h4 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h4><h5 id="1-打开手机端的5555端口"><a href="#1-打开手机端的5555端口" class="headerlink" title="1. 打开手机端的5555端口"></a>1. 打开手机端的5555端口</h5><p>让手机在指定的端口可以接收到TCP/IP连接。（当然，也可以不用5555，用5556或者9999等都可以，只要你喜欢）</p>
+<ol>
+<li>确保手机开启了usb调试</li>
+<li>用usb线把手机和电脑连接起来</li>
+<li>执行如下命令：<br><code>adb tcpip 5555</code><br>执行成功后就可以把usb线拔掉了。</li>
+</ol>
+<h5 id="2-找到手机的IP地址"><a href="#2-找到手机的IP地址" class="headerlink" title="2. 找到手机的IP地址"></a>2. 找到手机的IP地址</h5><p>一般在 设置-关于手机-状态信息-IP地址可以找到。 例如这里IP为：192.168.1.18</p>
+<h5 id="3-通过IP地址连接手机"><a href="#3-通过IP地址连接手机" class="headerlink" title="3. 通过IP地址连接手机"></a>3. 通过IP地址连接手机</h5><p>执行如下命令：adb connect 192.168.1.18<br>3.1 如果提示如下则表示连接成功</p>
+<blockquote>
+<p>connected to 192.168.1.18</p>
+</blockquote>
+<p>3.2 若提示：</p>
+<blockquote>
+<p>unable to connect to 192.168.1.108:5555: Operation timed out</p>
+</blockquote>
+<p>可能你的IP地址输错了;或者adb服务不可用;或者手机跟电脑没有正确地处在一个局域网中；或者链接被代理Block了等等等…</p>
+<p>3.3 若提示：</p>
+<blockquote>
+<p>unable to connect to 192.168.1.108:5555: Connection refused</p>
+</blockquote>
+<p>可能你手机的5555端口没有正确打开；或者有防火墙拦截等…</p>
+<h5 id="4-如果没有连接成功"><a href="#4-如果没有连接成功" class="headerlink" title="4. 如果没有连接成功"></a>4. 如果没有连接成功</h5><p>出现了3.2或3.3的错误提示，或者其他任何错误，都可以尝试重启一下adb服务：<br><code>adb kill-server</code><br>然后重新尝试。</p>
+<h5 id="5-连接成功"><a href="#5-连接成功" class="headerlink" title="5. 连接成功"></a>5. 连接成功</h5><p>如果连接成功的话，执行以下命令查看当前连接的设备列表： adb devices 可以看到连接的设备。</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ol>
+<li>更换一个网络环境（比如把手机和电脑从公司带回了家里），一般只需要按照新的手机IP重新进行一下connect即可。</li>
+<li>如果手机重启了，就需要重新连接数据线再次开启5555端口了。</li>
+<li>当然开启5555端口也并非必须通过adb，也有一些方法可以直接在手机上操作打开。但这些方法一般都需要root权限，如果你想要尝试在手机上进行开启，请注意安全。</li>
+<li>有利就有弊——无线调试较有线调试而言，优势自不必说，缺点是无线数据的传输会比有线要慢一些。</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Android开发时，一般我们都是用usb线把手机和电脑连接起来进行调试工作，在这记录下如何使用无线连接。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="android" scheme="https://jimmyju.github.io/categories/android/"/>
+    
+    
+      <category term="ADB Wi-Fi" scheme="https://jimmyju.github.io/tags/ADB-Wi-Fi/"/>
+    
+  </entry>
   
   <entry>
     <title>自定义view之onMeasure()的理解</title>
@@ -226,7 +284,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#58;&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;">&#101;&#x78;&#x61;&#x6d;&#112;&#108;&#x65;&#64;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#101;&#46;&#99;&#x6f;&#x6d;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;">&#x65;&#120;&#x61;&#109;&#x70;&#108;&#101;&#x40;&#x65;&#x78;&#x61;&#x6d;&#112;&#x6c;&#x65;&#x2e;&#99;&#111;&#x6d;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
