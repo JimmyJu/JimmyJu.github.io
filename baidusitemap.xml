@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+    
+    
+  <url>
+    <loc>https://jimmyju.github.io/2017/06/16/ABD-WIFI/</loc>
+    <lastmod>2017-06-16T12:49:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>ABD WIFI</title>
+        <pubTime>2017-06-16T12:14:21.000Z</pubTime>
+        
+        <tag>ADB Wi-Fi</tag>
+         
+         
+           
+             
+              <breadCrumb title="android" url="https://jimmyju.github.io/categories/android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jimmyju.github.io/2017/06/12/%E8%87%AA%E5%AE%9A%E4%B9%89view%E4%B9%8BonMeasure-%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
+    <lastmod>2017-06-14T05:47:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>自定义view之onMeasure()的理解</title>
+        <pubTime>2017-06-12T10:13:51.000Z</pubTime>
+        
+        <tag>view</tag>
+         
+         
+           
+             
+              <breadCrumb title="android" url="https://jimmyju.github.io/categories/android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jimmyju.github.io/2017/05/30/%E5%9F%BA%E4%BA%8Ehexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2017-05-31T09:28:24.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于hexo+github搭建个人博客</title>
+        <pubTime>2017-05-30T14:01:54.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>https://jimmyju.github.io/2017/05/29/Markdown/</loc>
+    <lastmod>2017-05-29T12:23:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown</title>
+        <pubTime>2017-05-29T12:17:32.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+</urlset>
