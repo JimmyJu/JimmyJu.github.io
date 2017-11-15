@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="view," />
 
 
 
@@ -92,15 +92,17 @@
 
 
 
-<meta name="description" content="任何事情只要心甘情愿，终将变得完美！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JIMMY">
-<meta property="og:url" content="https://jimmyju.github.io/index.html">
+<meta name="description" content="本文主要记录下对于自定义view中方法的理解。对于自定义view有三大流程：onMeasure（测量）、onLayout（布局）和onDraw（绘制）接下来我就要说下onMeasure()这个方法：">
+<meta name="keywords" content="view">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自定义view之onMeasure()的理解">
+<meta property="og:url" content="https://jimmyju.github.io/自定义view之onMeasure-的理解/index.html">
 <meta property="og:site_name" content="JIMMY">
-<meta property="og:description" content="任何事情只要心甘情愿，终将变得完美！">
+<meta property="og:description" content="本文主要记录下对于自定义view中方法的理解。对于自定义view有三大流程：onMeasure（测量）、onLayout（布局）和onDraw（绘制）接下来我就要说下onMeasure()这个方法：">
+<meta property="og:updated_time" content="2017-06-14T05:47:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="JIMMY">
-<meta name="twitter:description" content="任何事情只要心甘情愿，终将变得完美！">
+<meta name="twitter:title" content="自定义view之onMeasure()的理解">
+<meta name="twitter:description" content="本文主要记录下对于自定义view中方法的理解。对于自定义view有三大流程：onMeasure（测量）、onLayout（布局）和onDraw（绘制）接下来我就要说下onMeasure()这个方法：">
 
 
 
@@ -128,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="https://jimmyju.github.io/"/>
+  <link rel="canonical" href="https://jimmyju.github.io/自定义view之onMeasure-的理解/"/>
 
 
 
 
 
-  <title>JIMMY</title>
+  <title>自定义view之onMeasure()的理解 | JIMMY</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -160,9 +162,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -293,164 +293,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://jimmyju.github.io/ABD-WIFI/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jimmy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/eiffel_tower.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JIMMY">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/ABD-WIFI/" itemprop="url">ABD WIFI</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-16T20:14:21+08:00">
-                2017-06-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/android/" itemprop="url" rel="index">
-                    <span itemprop="name">android</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/ABD-WIFI/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="ABD-WIFI/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Android开发时，一般我们都是用usb线把手机和电脑连接起来进行调试工作，在这记录下如何使用无线连接。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/ABD-WIFI/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
-
-    <div>
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
 
   
 
@@ -476,9 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/自定义view之onMeasure-的理解/" itemprop="url">自定义view之onMeasure()的理解</a></h1>
+          <h1 class="post-title" itemprop="name headline">自定义view之onMeasure()的理解</h1>
         
 
         <div class="post-meta">
@@ -543,138 +386,10 @@
           
 
           
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>本文主要记录下对于自定义view中方法的理解。<br>对于自定义view有三大流程：<code>onMeasure</code>（测量）、<code>onLayout</code>（布局）和<code>onDraw</code>（绘制）<br>接下来我就要说下<code>onMeasure()</code>这个方法：</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/自定义view之onMeasure-的理解/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
-
-    <div>
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://jimmyju.github.io/基于hexo+github搭建个人博客/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jimmy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/eiffel_tower.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JIMMY">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/基于hexo+github搭建个人博客/" itemprop="url">基于hexo+github搭建个人博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-30T22:01:54+08:00">
-                2017-05-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/基于hexo+github搭建个人博客/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="基于hexo+github搭建个人博客/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
           
 
           
@@ -691,16 +406,39 @@
       
 
       
-        
-          <p>由于最近刚搭建的博客，所以特此来记录下我的个人经验。注：本文使用的环境为Mac OS。Windows的也基本差不多，可以参考。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/基于hexo+github搭建个人博客/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>本文主要记录下对于自定义view中方法的理解。<br>对于自定义view有三大流程：<code>onMeasure</code>（测量）、<code>onLayout</code>（布局）和<code>onDraw</code>（绘制）<br>接下来我就要说下<code>onMeasure()</code>这个方法：</p>
+<a id="more"></a>
+<h4 id="onMeasure"><a href="#onMeasure" class="headerlink" title="onMeasure"></a>onMeasure</h4><p>在布局文件中，对于自定义view的<code>layout_width</code>和<code>layout_height</code>不设置<code>wrap_content</code>,一般不需要进行处理，但如果要设置<code>wrap_content</code>，就要对宽高进行测量。<br><strong>onMeasure函数原型</strong>：<br><code>protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec)</code></p>
+<p>参数中的<code>widthMeasureSpec</code>和<code>heightMeasureSpec</code>里面包含了测量模式和尺寸，在这可以借助<strong>Android内置的MeasureSpec类</strong>来获取测量模式和尺寸：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">int widthMode = MeasureSpec.getMode(widthMeasureSpec);</div><div class="line">int widthSize = MeasureSpec.getSize(widthMeasureSpec);</div></pre></td></tr></table></figure>
+<p>对于测量模式有三种情况：</p>
+<table>
+<thead>
+<tr>
+<th>测量模式</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UNSPECIFIED</td>
+<td>父容器没有对当前View有任何限制，当前View可以任意取尺寸</td>
+</tr>
+<tr>
+<td>EXACTLY</td>
+<td>当前尺寸就是当前View应该取的尺寸，对应于<code>match_parent</code>和具体数值情况</td>
+</tr>
+<tr>
+<td>AT_MOST</td>
+<td>当前View所能取的最大尺寸，一般是给定一个大小，view的尺寸不能超过该大小，一般用于<code>wrap_content</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>手重写onMeasure函数</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">@Overrideprotected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) &#123;</div><div class="line">    super.onMeasure(widthMeasureSpec, heightMeasureSpec);</div><div class="line"></div><div class="line">    int width = MeasureSpec.getSize(widthMeasureSpec);</div><div class="line">    int widthMode = MeasureSpec.getMode(widthMeasureSpec);</div><div class="line">    int height = MeasureSpec.getSize(heightMeasureSpec);</div><div class="line">    int heightMode = MeasureSpec.getMode(heightMeasureSpec);</div><div class="line"></div><div class="line">    if (widthMode == MeasureSpec.AT_MOST &amp;&amp; heightMode == MeasureSpec.AT_MOST) &#123;</div><div class="line">        setMeasuredDimension(WRAP_WIDTH, WRAP_HEIGHT);</div><div class="line">    &#125; else if (widthMode == MeasureSpec.AT_MOST) &#123;</div><div class="line">        setMeasuredDimension(WRAP_WIDTH, height);</div><div class="line">    &#125; else if (heightMode == MeasureSpec.AT_MOST) &#123;</div><div class="line">        setMeasuredDimension(width, WRAP_HEIGHT);</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>只处理AT_MOST情况也就是<code>wrap_content</code>,其他情况则沿用系统的测量值即可。<code>setMeasuredDimension</code>会设置View宽高的测量值，只有<code>setMeasuredDimension</code>调用之后，才能使用<code>getMeasuredWidth()</code>和<code>getMeasuredHeight()</code>来获取视图测量出的宽高，以此之前调用这两个方法得到的值都会是0。</p>
+<p>注意：在覆写onMeasure方法的时候，必须调用 <code>setMeasuredDimension(int,int)</code>来存储这个View经过测量得到的measured width and height。</p>
+
       
     </div>
 
@@ -708,174 +446,93 @@
 
     <div>
       
+        
+      
     </div>
     
     <div>
       
+        
+
+      
     </div>
 
     <div>
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="https://jimmyju.github.io/Markdown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jimmy">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/eiffel_tower.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JIMMY">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Markdown/" itemprop="url">Markdown</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-29T20:17:32+08:00">
-                2017-05-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/Markdown/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="Markdown/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/images/wechatpay.png" alt="Jimmy WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
+    </div>
+  </div>
 
+
+      
+    </div>
+
+    <div>
       
         
-          <h1 id="Markdown-语法和-MWeb-写作使用说明"><a href="#Markdown-语法和-MWeb-写作使用说明" class="headerlink" title="Markdown 语法和 MWeb 写作使用说明"></a>Markdown 语法和 MWeb 写作使用说明</h1><h2 id="Markdown-的设计哲学"><a href="#Markdown-的设计哲学" class="headerlink" title="Markdown 的设计哲学"></a>Markdown 的设计哲学</h2><blockquote>
-<p>Markdown 的目標是實現「易讀易寫」。<br>不過最需要強調的便是它的可讀性。一份使用 Markdown 格式撰寫的文件應該可以直接以純文字發佈，並且看起來不會像是由許多標籤或是格式指令所構成。<br>Markdown 的語法有個主要的目的：用來作為一種網路內容的<em>寫作</em>用語言。</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/Markdown/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
 
-    <div style="text-align:center;color: #ccc;font-size:14px;">---------------- The End ----------------</div>
-
-    <div>
-      
-    </div>
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/tags/view/" rel="tag"># view</a>
+          
+        </div>
       
 
       
+        
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/基于hexo+github搭建个人博客/" rel="next" title="基于hexo+github搭建个人博客">
+                <i class="fa fa-chevron-left"></i> 基于hexo+github搭建个人博客
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/ABD-WIFI/" rel="prev" title="ABD WIFI">
+                ABD WIFI <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -883,6 +540,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -902,8 +570,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/eiffel_tower.png"
@@ -1006,6 +683,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#onMeasure"><span class="nav-number">1.</span> <span class="nav-text">onMeasure</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1156,6 +849,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
 
   
 
@@ -1173,6 +870,18 @@
       <script id="dsq-count-scr" src="https://jimmyio.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'https://jimmyju.github.io/自定义view之onMeasure-的理解/';
+          this.page.identifier = '自定义view之onMeasure-的理解/';
+          this.page.title = '自定义view之onMeasure()的理解';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://jimmyio.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
