@@ -4,14 +4,53 @@
 
     
   <url>
+    <loc>https://jimmyju.github.io/archives/4025323798.html</loc>
+    <lastmod>2017-11-20T13:37:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>Hexo博客之后续SEO优化</title>
+        <pubTime>2017-11-20T04:57:11.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+        <tag>SEO</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="https://jimmyju.github.io/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jimmyju.github.io/archives/17683.html</loc>
+    <lastmod>2017-11-20T05:19:43.000Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown</title>
+        <pubTime>2017-05-29T12:17:32.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jimmyju.github.io/archives/20251.html</loc>
-    <lastmod>2017-11-19T08:42:10.000Z</lastmod>
+    <lastmod>2017-11-20T05:02:34.000Z</lastmod>
     <data>
         <display>
         <title>ABD WIFI</title>
         <pubTime>2017-06-16T12:14:21.000Z</pubTime>
         
-        <tag>ADB Wi-Fi</tag>
+        <tag>ADB</tag>
+         
+        <tag>Wi-Fi</tag>
          
          
            
@@ -33,21 +72,6 @@
         
         <tag>hexo</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jimmyju.github.io/archives/17683.html</loc>
-    <lastmod>2017-11-19T08:42:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown</title>
-        <pubTime>2017-05-29T12:17:32.000Z</pubTime>
-        
          
            
         </display>
