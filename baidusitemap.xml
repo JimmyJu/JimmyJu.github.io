@@ -4,6 +4,23 @@
 
     
   <url>
+    <loc>https://jimmyju.github.io/archives/54343.html</loc>
+    <lastmod>2017-11-20T14:42:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于hexo+github搭建个人博客</title>
+        <pubTime>2017-05-30T14:01:54.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jimmyju.github.io/archives/4025323798.html</loc>
     <lastmod>2017-11-20T13:46:33.000Z</lastmod>
     <data>
@@ -57,23 +74,6 @@
              
               <breadCrumb title="android" url="https://jimmyju.github.io/categories/android/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jimmyju.github.io/archives/54343.html</loc>
-    <lastmod>2017-11-19T08:42:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>基于hexo+github搭建个人博客</title>
-        <pubTime>2017-05-30T14:01:54.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
         </display>
     </data>
     </url>
