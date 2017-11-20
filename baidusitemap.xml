@@ -4,25 +4,8 @@
 
     
   <url>
-    <loc>https://jimmyju.github.io/Markdown/</loc>
-    <lastmod>2017-11-18T04:26:19.000Z</lastmod>
-    <data>
-        <display>
-        <title>Markdown</title>
-        <pubTime>2017-05-29T12:17:32.000Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-    
-    
-  <url>
-    <loc>https://jimmyju.github.io/ABD-WIFI/</loc>
-    <lastmod>2017-06-16T12:49:55.000Z</lastmod>
+    <loc>https://jimmyju.github.io/archives/20251.html</loc>
+    <lastmod>2017-11-19T08:42:10.000Z</lastmod>
     <data>
         <display>
         <title>ABD WIFI</title>
@@ -41,8 +24,40 @@
 
     
   <url>
-    <loc>https://jimmyju.github.io/%E8%87%AA%E5%AE%9A%E4%B9%89view%E4%B9%8BonMeasure-%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
-    <lastmod>2017-06-14T05:47:29.000Z</lastmod>
+    <loc>https://jimmyju.github.io/archives/17683.html</loc>
+    <lastmod>2017-11-19T08:42:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>Markdown</title>
+        <pubTime>2017-05-29T12:17:32.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jimmyju.github.io/archives/54343.html</loc>
+    <lastmod>2017-11-19T08:42:10.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于hexo+github搭建个人博客</title>
+        <pubTime>2017-05-30T14:01:54.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>https://jimmyju.github.io/archives/15602.html</loc>
+    <lastmod>2017-11-19T08:42:10.000Z</lastmod>
     <data>
         <display>
         <title>自定义view之onMeasure()的理解</title>
@@ -60,22 +75,7 @@
     </url>
 
     
-  <url>
-    <loc>https://jimmyju.github.io/%E5%9F%BA%E4%BA%8Ehexo+github%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2017-05-31T09:28:24.000Z</lastmod>
-    <data>
-        <display>
-        <title>基于hexo+github搭建个人博客</title>
-        <pubTime>2017-05-30T14:01:54.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
+    
     
     
 </urlset>
