@@ -1,4 +1,2 @@
-# 我的Hexo博客
+# 我的HEXO博客
 # https://jimmyju.github.io/
-
-
