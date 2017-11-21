@@ -4,8 +4,28 @@
 
     
   <url>
+    <loc>https://jimmyju.github.io/archives/54343.html</loc>
+    <lastmod>2017-11-21T02:39:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>基于hexo+github搭建个人博客</title>
+        <pubTime>2017-05-30T14:01:54.000Z</pubTime>
+        
+        <tag>Hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="Hexo" url="https://jimmyju.github.io/categories/Hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>https://jimmyju.github.io/archives/4025323798.html</loc>
-    <lastmod>2017-11-21T02:27:54.000Z</lastmod>
+    <lastmod>2017-11-21T02:36:30.000Z</lastmod>
     <data>
         <display>
         <title>Hexo博客之后续SEO优化</title>
@@ -63,26 +83,6 @@
            
              
               <breadCrumb title="android" url="https://jimmyju.github.io/categories/android/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>https://jimmyju.github.io/archives/54343.html</loc>
-    <lastmod>2017-11-21T02:27:46.000Z</lastmod>
-    <data>
-        <display>
-        <title>基于hexo+github搭建个人博客</title>
-        <pubTime>2017-05-30T14:01:54.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="Hexo" url="https://jimmyju.github.io/categories/Hexo/"/>
           
         </display>
     </data>
