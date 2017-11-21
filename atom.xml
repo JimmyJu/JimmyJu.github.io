@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jimmyju.github.io/"/>
-  <updated>2017-11-20T13:46:33.000Z</updated>
+  <updated>2017-11-21T02:27:54.000Z</updated>
   <id>https://jimmyju.github.io/</id>
   
   <author>
@@ -20,11 +20,11 @@
     <link href="https://jimmyju.github.io/archives/4025323798.html"/>
     <id>https://jimmyju.github.io/archives/4025323798.html</id>
     <published>2017-11-20T04:57:11.000Z</published>
-    <updated>2017-11-20T13:46:33.000Z</updated>
+    <updated>2017-11-21T02:27:54.000Z</updated>
     
     <content type="html"><![CDATA[<p>SEO (Search Engine Optimization)，即搜索引擎优化。简单来说，SEO就是您可以使用提升网站排名的所有方法的总称，SEO用于确保您的网站及其内容在搜索引擎结果页面（SERP）上的可见性。</p>
 <a id="more"></a>
-<h1 id="验证你的网站-让你博客被搜索引擎找到"><a href="#验证你的网站-让你博客被搜索引擎找到" class="headerlink" title="验证你的网站(让你博客被搜索引擎找到)"></a>验证你的网站(让你博客被搜索引擎找到)</h1><h2 id="查看你的博客是否被收入"><a href="#查看你的博客是否被收入" class="headerlink" title="查看你的博客是否被收入"></a>查看你的博客是否被收入</h2><p>在谷歌或者百度的搜索链接中，使用以下格式可以直接搜索自己的域名， 如果能搜索到就说明已经被收录，反之则没有。可以直接搜索自己的域名，或者加一些关键词来更好地判断，例如：<br><code>site: https://fedoryx.github.io/</code></p>
+<h1 id="验证你的网站-让你博客被搜索引擎找到"><a href="#验证你的网站-让你博客被搜索引擎找到" class="headerlink" title="验证你的网站(让你博客被搜索引擎找到)"></a>验证你的网站(让你博客被搜索引擎找到)</h1><h2 id="查看你的博客是否被收入"><a href="#查看你的博客是否被收入" class="headerlink" title="查看你的博客是否被收入"></a>查看你的博客是否被收入</h2><p>在谷歌或者百度的搜索链接中，使用以下格式可以直接搜索自己的域名， 如果能搜索到就说明已经被收录，反之则没有。可以直接搜索自己的域名，或者加一些关键词来更好地判断，例如：<br><code>site: https://xxxxxx.github.io/</code></p>
 <h2 id="提交我们的网站"><a href="#提交我们的网站" class="headerlink" title="提交我们的网站"></a>提交我们的网站</h2><p>若未被搜索引擎收录，则需进行以下配置，首先要让搜索引擎先验证我们对网站的所有权，两个搜索引擎提交的入口分别为：<br><a href="https://www.google.com/webmasters/tools/home?hl=zh-CN" target="_blank" rel="external">Google Search Console</a><img src="http://ozc87s7hq.bkt.clouddn.com/Google1.png" alt="Google1"></p>
 <p><a href="http://ziyuan.baidu.com/site/siteadd" target="_blank" rel="external">百度站长平台</a><img src="http://ozc87s7hq.bkt.clouddn.com/baidu1.png" alt="baidu1"></p>
 <p>有多种验证方式，这里推荐 <code>HTML</code> 文件上传方式。下载 <code>HTML</code> 验证文件，拷贝到 <code>Hexo/sources/</code> 文件夹下,为了使 hexo 不处理这两个验证文件，并且不生成关于这两个文件的 <code>sitemap</code>，我们需要打开验证文件，在最上面添加以下代码：</p>
@@ -92,7 +92,7 @@
     <link href="https://jimmyju.github.io/archives/20251.html"/>
     <id>https://jimmyju.github.io/archives/20251.html</id>
     <published>2017-06-16T12:14:21.000Z</published>
-    <updated>2017-11-20T05:02:34.000Z</updated>
+    <updated>2017-11-21T02:27:51.000Z</updated>
     
     <content type="html"><![CDATA[<p>Android开发时，一般我们都是用usb线把手机和电脑连接起来进行调试工作，在这记录下如何使用无线连接。</p>
 <a id="more"></a>
@@ -152,7 +152,7 @@
     <link href="https://jimmyju.github.io/archives/15602.html"/>
     <id>https://jimmyju.github.io/archives/15602.html</id>
     <published>2017-06-12T10:13:51.000Z</published>
-    <updated>2017-11-19T08:42:10.000Z</updated>
+    <updated>2017-11-21T02:27:48.000Z</updated>
     
     <content type="html"><![CDATA[<p>本文主要记录下对于自定义view中方法的理解。<br>对于自定义view有三大流程：<code>onMeasure</code>（测量）、<code>onLayout</code>（布局）和<code>onDraw</code>（绘制）<br>接下来我就要说下<code>onMeasure()</code>这个方法：</p>
 <a id="more"></a>
@@ -199,6 +199,8 @@
     
       <category term="view" scheme="https://jimmyju.github.io/tags/view/"/>
     
+      <category term="android" scheme="https://jimmyju.github.io/tags/android/"/>
+    
   </entry>
   
   <entry>
@@ -206,7 +208,7 @@
     <link href="https://jimmyju.github.io/archives/54343.html"/>
     <id>https://jimmyju.github.io/archives/54343.html</id>
     <published>2017-05-30T14:01:54.000Z</published>
-    <updated>2017-11-20T14:42:32.000Z</updated>
+    <updated>2017-11-21T02:27:46.000Z</updated>
     
     <content type="html"><![CDATA[<p>由于最近刚搭建的博客，所以特此来记录下我的个人经验。注：本文使用的环境为Mac OS。Windows的也基本差不多，可以参考。</p>
 <a id="more"></a>
@@ -297,6 +299,8 @@
     
     </summary>
     
+      <category term="Hexo" scheme="https://jimmyju.github.io/categories/Hexo/"/>
+    
     
       <category term="hexo" scheme="https://jimmyju.github.io/tags/hexo/"/>
     
@@ -358,7 +362,7 @@
 <h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">email &lt;example@example.com&gt;</div><div class="line">[GitHub](http://github.com)</div><div class="line">自动生成连接  &lt;http://www.github.com/&gt;</div></pre></td></tr></table></figure>
 <p><code>Control + Shift + L</code> 可插入Markdown语法。<br>如果是 MWeb 的文档库中的文档，拖放或<code>CMD + Option + I</code> 导入非图片时，会生成连接。<br>效果如下：</p>
-<p>Email 连接： <a href="&#109;&#97;&#x69;&#x6c;&#x74;&#111;&#58;&#101;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#46;&#99;&#x6f;&#109;">&#101;&#120;&#97;&#109;&#x70;&#x6c;&#101;&#64;&#x65;&#120;&#97;&#x6d;&#112;&#108;&#101;&#46;&#99;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
+<p>Email 连接： <a href="&#109;&#x61;&#x69;&#108;&#x74;&#x6f;&#x3a;&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;">&#x65;&#120;&#x61;&#109;&#112;&#108;&#x65;&#x40;&#x65;&#x78;&#x61;&#109;&#x70;&#x6c;&#x65;&#46;&#99;&#x6f;&#109;</a><br><a href="http://github.com" target="_blank" rel="external">连接标题Github网站</a><br>自动生成连接像： <a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a> 这样</p>
 <h2 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h2><p>Markdown 语法：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">某某说:</div><div class="line">&gt; 第一行引用</div><div class="line">&gt; 第二行费用文字</div></pre></td></tr></table></figure>
 <p><code>CMD + Shift + B</code> 可插入Markdown语法。<br>效果如下：</p>
